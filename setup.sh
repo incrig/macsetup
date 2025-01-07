@@ -13,8 +13,11 @@ brew install --cask warp
 
 source "/opt/homebrew/opt/kube-ps1/share/kube-ps1.sh"
 
+# Install OZSH
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-git clone https://github.com/Dbz/kube-aliases.git ~/.oh-my-zsh/custom/plugins/kube-aliases\necho "plugins+=(kube-aliases)" >> ~/.zshrc
+
+git clone https://github.com/Dbz/kube-aliases.git ~/.oh-my-zsh/custom/plugins/kube-aliases
+echo "plugins+=(kube-aliases)" >> ~/.zshrc
 wget https://raw.githubusercontent.com/incrig/macsetup/refs/heads/main/config/hyper.js -o /Users/---USERNAME---/.hyper.js
 
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"

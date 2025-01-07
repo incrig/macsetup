@@ -23,6 +23,7 @@ git clone --depth=1 https://github.com/amix/vimrc.git ~/.vim_runtime
 
 # Additional stuff
 # Make sure kube-ps1 is loaded from your ~/.zshrc and/or ~/.bashrc:
+source "/opt/homebrew/opt/kube-ps1/share/kube-ps1.sh"
 echo "/opt/homebrew/opt/kube-ps1/share/kube-ps1.sh" >> ~/.zshrc
 echo "PS1='$(kube_ps1)'$PS1" >> ~/.zshrc
 

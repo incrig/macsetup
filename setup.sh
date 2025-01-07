@@ -9,7 +9,7 @@ brew install zsh kubectx kube-ps1 zsh-syntax-highlighting watch inetutils wget
 
 # Install Hyper terminal & config
 brew install --cask hyper
-wget https://raw.githubusercontent.com/incrig/macsetup/refs/heads/main/config/hyper.js -o /Users/---USERNAME---/.hyper.js
+wget https://raw.githubusercontent.com/incrig/macsetup/refs/heads/main/config/.hyper.js -o /Users/---USERNAME---/.hyper.js
 
 # Install OZSH
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"

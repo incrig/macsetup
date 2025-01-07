@@ -1,15 +1,14 @@
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-# Add command to post-setup brew eval commands
-# echo >> /Users/---USERNAME---/.zprofile
-# echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/---USERNAME---/.zprofile
-# eval "$(/opt/homebrew/bin/brew shellenv)"
+echo > /Users/$(whoami)/.zprofile
+echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/$(whoami)/.zprofile
 
-brew update && brew upgrade
+# Start using BREW right now
+eval "$(/opt/homebrew/bin/brew shellenv)"
 brew install zsh kubectx kube-ps1 zsh-syntax-highlighting watch inetutils wget
 
 # Install Hyper terminal & config
 brew install --cask hyper
-wget https://raw.githubusercontent.com/incrig/macsetup/refs/heads/main/config/.hyper.js -o /Users/---USERNAME---/.hyper.js
+wget https://raw.githubusercontent.com/incrig/macsetup/refs/heads/main/config/.hyper.js -O /Users/$(whoami)/.hyper.js
 
 # Install OZSH
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"

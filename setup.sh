@@ -30,3 +30,6 @@ echo "PS1='$(kube_ps1)'$PS1" >> ~/.zshrc
 # If you receive "highlighters directory not found" error message,
 # you may need to add the following to your .zshenv:
 #   export ZSH_HIGHLIGHT_HIGHLIGHTERS_DIR=/opt/homebrew/share/zsh-syntax-highlighting/highlighters
+
+# Start hyper terminal. Should be configured at this point
+hyper

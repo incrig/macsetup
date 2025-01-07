@@ -4,7 +4,9 @@ echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/$(whoami)/.zprofile
 
 # Start using BREW right now
 eval "$(/opt/homebrew/bin/brew shellenv)"
-brew install zsh kubectx kube-ps1 zsh-syntax-highlighting watch inetutils wget
+
+# Install basic packages
+brew install zsh kubectx kube-ps1 zsh-syntax-highlighting watch inetutils wget helm 
 
 # Install Hyper terminal & config
 brew install --cask hyper
@@ -20,16 +22,13 @@ echo "source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlight
 
 # Install VIM config
 git clone --depth=1 https://github.com/amix/vimrc.git ~/.vim_runtime
+sh ~/.vim_runtime/install_awesome_vimrc.sh
 
 # Additional stuff
 # Make sure kube-ps1 is loaded from your ~/.zshrc and/or ~/.bashrc:
+chmod +x "/opt/homebrew/opt/kube-ps1/share/kube-ps1.sh"
 source "/opt/homebrew/opt/kube-ps1/share/kube-ps1.sh"
 echo "/opt/homebrew/opt/kube-ps1/share/kube-ps1.sh" >> ~/.zshrc
-echo "PS1='$(kube_ps1)'$PS1" >> ~/.zshrc
-
-# If you receive "highlighters directory not found" error message,
-# you may need to add the following to your .zshenv:
-#   export ZSH_HIGHLIGHT_HIGHLIGHTERS_DIR=/opt/homebrew/share/zsh-syntax-highlighting/highlighters
 
 # Start hyper terminal. Should be configured at this point
 hyper

@@ -16,6 +16,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 source "/opt/homebrew/opt/kube-ps1/share/kube-ps1.sh"
 echo "source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> ${ZDOTDIR:-$HOME}/.zshrc
 
+git clone https://github.com/Dbz/kube-aliases.git ~/.oh-my-zsh/custom/plugins/kube-aliases\necho "plugins+=(kube-aliases)" >> ~/.zshrc
 
 # Additional stuff
 # Make sure kube-ps1 is loaded from your ~/.zshrc and/or ~/.bashrc:
